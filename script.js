@@ -1,9 +1,12 @@
 const btn1 = document.querySelectorAll("button"); // button
 const Number1 = document.getElementById("number");
 const score = document.getElementById("scorepoint");
-const popup = document.querySelector(".pop");
-popup.style.display = "none";
+const popup = document.getElementsByClassName("pop");
+const scoreNum = document.getElementById("scoreNum");
+
+popup[0].style.display = "none";
 score.innerText = 0;
+scoreNum.innerText = score.innerText;
 
 // Generate random new number for header
 function newNum() {
@@ -24,8 +27,8 @@ btn1.forEach((btn) => {
       });
       score.innerText++;
     } else {
-      popup.style.display = "visible";
-      console.log("popup");
+      popup[0].style.display = "block";
+      scoreNum.innerText = score.innerText;
     }
   });
 });

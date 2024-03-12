@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url("BG.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .main {
   width: 40rem;
   height: 45rem;
@@ -16,6 +22,9 @@
   flex-direction: column;
 }
 .header {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   width: 100%;
   height: 5rem;
   background: lightgreen;
@@ -24,9 +33,6 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
-}
-.header .timer {
-  font-size: 2rem;
 }
 .container {
   background: white;
@@ -58,25 +64,57 @@
     filter: drop-shadow(0px 0px 15px rgba(70, 128, 0, 0.511));
   }
 }
+.num {
+  font-size: 2rem;
+}
+
 .score {
+  background: rgba(0, 0, 0, 0.154);
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   position: absolute;
   right: 5rem;
   width: 5rem;
 }
-#box1 {
+#n1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: green;
+}
+#number {
+  color: rgb(1, 112, 1);
+  font-weight: 800;
+  margin: auto;
+  display: inline-block;
   background: white;
-  padding: 0.5rem;
+  border: 2px solid rgb(0, 217, 18);
+  padding: 0.4rem 0.5rem;
+  width: 3rem;
+  text-align: center;
   border-radius: 0.5rem;
 }
 .popup {
   position: fixed;
-  background: rgb(214, 239, 248);
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: solid 0.2rem rgba(0, 0, 0, 0.32);
+  background: rgb(1, 110, 26);
+  color: rgb(15, 15, 15);
   padding: 2rem;
   border-radius: 2rem;
   width: 35rem;
   height: 25rem;
-  z-index: 999;
+  z-index: 95;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -89,4 +127,21 @@
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+#tryagain {
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  transition: all 200ms;
+  background: rgb(3, 59, 0);
+  &:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.275));
+  }
 }
